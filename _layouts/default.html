@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {% capture title %}{% if page.title %}{{ page.title | capitalize }}{% if page.tagline %} -- {{page.tagline| capitalize }}{% endif %} || {{site.title}}{% else %} {{site.title}}{% endif %}{% endcapture %}
+
+        <title>{{ title | escape }}</title>
+        <title>Scatterlab</title>
+        <meta name="description" content="DESCRIPTION HERE">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/basscss.min.css">
+        <link rel="stylesheet" href="/css/basscss.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500|Roboto:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css">
+
+        {% if page.styles %}
+            {% for style in page.styles %}
+            <link rel="stylesheet" href="{{style}}">
+            {% endfor %}
+        {% endif %}
+
+          <script type="text/javascript">
+          if(!window.$) {
+            window.__call_laters = [];
+            function jq_dummy(fun) {
+               window.__call_laters.push(fun)
+            }
+            window.$ = jq_dummy;
+          }
+          </script>
+    </head>
+
+    <body>
+
+    {{content}}
+
+  <div class="footer-elem">
+    <footer>
+      <div class="center pt4 mt3">
+        <p style="font-size:0.8rem">Copyright 2018 - Scatterlab</p>
+      </div>
+    </footer>
+  </div>
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/css.js"></script>
+        <script type="text/javascript" src="/js/s3.js"></script>
+        <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </body>
+</html>
