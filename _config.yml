@@ -1,7 +1,7 @@
 # Site settings
 title: ScatterLab
 email: hello@scatterlab.org
-description: scatterlab.org
+description: We believe that when data is collected for the purpose of profit generation, without regard for human autonomy, society loses. Our human-centric decision-making and collection tools help organisations leverage their data for greater aims.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "scatterlab.org" # the base hostname & protocol for your site
 twitter_username: scatterlab
